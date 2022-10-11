@@ -1,12 +1,37 @@
-import logo from './logo.svg';
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blogs from './Component/Blogs/Blogs';
+import Home from './Component/Home/Home';
+import Statistics from './Component/Statistics/Statistics';
+import Main from './Layouts/Main';
 
 function App() {
+  
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children:[
+        {
+          path: "/",
+          element:<Home></Home>
+        },
+        {
+          path: "blogs",
+          element:<Blogs></Blogs>
+        },
+        {
+          path: "statistics",
+          element:<Statistics></Statistics>
+        },
+      ]
+    },
+  ]);
+
   return (
-    <div className="App">
-       <h1 className="text-3xl font-bold underline">
-      Hi, I am react-tailwind
-    </h1>
+    <div className="App">  
+      <RouterProvider router={router} />
     </div>
   );
 }
