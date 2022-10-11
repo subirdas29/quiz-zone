@@ -5,6 +5,7 @@ import Blogs from './Component/Blogs/Blogs';
 import Home from './Component/Home/Home';
 import Statistics from './Component/Statistics/Statistics';
 import Main from './Layouts/Main';
+import AllQuiz from './Component/AllQuiz/AllQuiz';
 
 function App() {
   
@@ -21,6 +22,13 @@ function App() {
           element:<Home></Home>
         },
         {
+          path: "/quiz/:quizid",
+          loader: async ({params}) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizid}`);
+          },
+          element:<AllQuiz></AllQuiz>
+        },
+        {
           path: "blogs",
           element:<Blogs></Blogs>
         },
@@ -30,6 +38,7 @@ function App() {
         },
       ]
     },
+    {path:"*", element: <div>This is error:404</div>}
   ]);
 
   return (
