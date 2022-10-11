@@ -16,32 +16,34 @@ const Statistics = () => {
     {
         axios.get('https://openapi.programming-hero.com/api/quiz')
         .then(data=>
-            {
-                
-                const quesTotal= data.map(total=> {
-                    const quizTotal =
-                    {
-                        total:{total},
-                    } 
-                    return quizTotal;
 
+            {
+                const totalLoaded = data.data.data;
+                const totalData =totalLoaded.map(
+                    totalQz =>
+                    {
+                        const totalQuiz= {
+                            name:totalQz.name,
+                            total:totalQz.total
+                        }
+                        return totalQuiz;
+                    })
+                    setTotal(totalData)
             })
-            setTotal(quesTotal)
+        },[])
+
     return (
-        <div>
-        <BarChart
-      width={600}
-      height={300}
-      data={total}
-     
-    >
-        <Bar dataKey="total" fill="#8884d8" />
-        <XAxis dataKey="total" />
-      <YAxis />
-      <Tooltip />
-    </BarChart>
+        <div className='m-32'>
+        <LineChart  width={800} height={600} data={total}>
+        <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        </LineChart>
     </div>
-    );
+);
 };
+
+
 
 export default Statistics;

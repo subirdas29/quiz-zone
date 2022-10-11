@@ -9,8 +9,8 @@ let questions = question.split('</p>');
 
 
   return (
-        <div className='my-6'>
-            <h2 className='text-2xl font-bold'>{questions}</h2>
+        <div className='m-20 border border-sky-400 p-10 '>
+            <h2 className='text-2xl font-bold mb-7'>{questions}</h2>
             {
                 options.map(option => <Options option={option}></Options>)
             }

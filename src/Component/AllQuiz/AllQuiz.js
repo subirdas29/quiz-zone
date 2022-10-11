@@ -7,9 +7,6 @@ const AllQuiz = () => {
     const allQuizes = useLoaderData();
    
 
-
-
-
     return (
         <div>
         {
