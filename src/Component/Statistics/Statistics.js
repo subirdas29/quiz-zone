@@ -35,7 +35,7 @@ const Statistics = () => {
     return (
         <div className='m-32'>
         <LineChart  width={800} height={600} data={total}>
-        <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="total" stroke="#8884d8" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />

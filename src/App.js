@@ -6,6 +6,7 @@ import Home from './Component/Home/Home';
 import Statistics from './Component/Statistics/Statistics';
 import Main from './Layouts/Main';
 import AllQuiz from './Component/AllQuiz/AllQuiz';
+import About from './Component/About/About';
 
 function App() {
   
@@ -35,6 +36,10 @@ function App() {
         {
           path: "statistics",
           element:<Statistics></Statistics>
+        },
+        {
+          path: "about",
+          element:<About></About>
         },
       ]
     },
