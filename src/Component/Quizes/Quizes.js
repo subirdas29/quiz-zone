@@ -33,11 +33,11 @@ const {question,options,correctAnswer} =allQuiz;
 console.log(handleCorrectAns)
 
   return (
-        <div className='m-20 border border-sky-400 p-10 flex justify-between'>
+        <div className='m-10 rounded-lg border border-sky-400 p-10 flex justify-between'>
             <div>
             <h2 className='text-2xl font-bold mb-7'>{question}</h2>
             {
-                options.map(option => <Options handleAnsOfQtn={handleAnsOfQtn} option={option}></Options>)
+                options.map((option,id) => <Options handleAnsOfQtn={handleAnsOfQtn} key={id} option={option}></Options>)
             }
             </div>
             <div>

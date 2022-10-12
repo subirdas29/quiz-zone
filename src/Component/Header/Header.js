@@ -11,10 +11,10 @@ const Header = () => {
                 <h2 className='text-2xl font-bold'>QuiZ Zone</h2>
             </Link>
            <div className='flex '>
-           <NavLink to='/' className='ml-4 text-lg'>Home</NavLink>
-            <NavLink to='/statistics' className='ml-4 text-lg'>Statistics</NavLink>
-            <NavLink to='/blogs' className='ml-4 text-lg'>Blog</NavLink>
-            <NavLink to='/about' className='ml-4 text-lg'>About</NavLink>
+           <NavLink to='/' className='ml-2 text-lg'>Home</NavLink>
+            <NavLink to='/statistics' className='ml-2 text-lg'>Statistics</NavLink>
+            <NavLink to='/blogs' className='ml-2 text-lg'>Blog</NavLink>
+            <NavLink to='/about' className='ml-2 text-lg'>About</NavLink>
            </div>
         </nav>
     );

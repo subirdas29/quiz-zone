@@ -20,7 +20,7 @@ const Topics = ({quiz}) => {
                 <div className='flex justify-between '>
                 <p className='flex items-center'>{name}</p>
                 
-                <Link to={`/quiz/${id}`}> <button className='w-32 bg-green-500 py-2 mt-4 rounded font-bold text-white'>
+                <Link to={`/quiz/${id}`}> <button className='w-auto bg-green-500 p-2 mt-4 rounded font-bold text-white'>
                  Start quiz </button></Link>
                 
                 </div>
