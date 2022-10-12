@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <div className='flex justify-center '>
             <img className='h-60' src={Logo} alt="" />
-            <h2 className='flex items-center text-5xl font-bold'>Let's check your Quiz Knowledge</h2>
+            <h2 className='flex items-center text-5xl font-bold'>Let's check your Knowledge</h2>
             </div>
             <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 m-20 gap-6 mt-0'>
             {
