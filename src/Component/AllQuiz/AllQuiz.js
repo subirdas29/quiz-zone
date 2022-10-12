@@ -5,7 +5,6 @@ import Quizes from '../Quizes/Quizes';
 const AllQuiz = () => {
 
     const allQuizes = useLoaderData();
-    console.log(allQuizes);
     
    
 
@@ -14,7 +13,6 @@ const AllQuiz = () => {
         {
             allQuizes.data.questions.map( allQuiz => <Quizes key={allQuiz.id} 
                 allQuiz={allQuiz}>
-                {/* // handleAnsOfQtn={handleAnsOfQtn}> */}
                 </Quizes> )
         }
         </div>
